@@ -1,11 +1,24 @@
 <!DOCTYPE html><html><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>情绪记录员</title><style>
 body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#faf8f5;color:#333;padding:20px;max-width:1100px;margin:0 auto}
+
+.hero{display:flex;gap:18px;align-items:center;background:#fff;border-radius:16px;padding:22px 26px;margin-bottom:18px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.hero-today{text-align:center;flex-shrink:0;width:94px}
+.hero-today .big-emoji{font-size:50px;line-height:1.1;display:block}
+.hero-today .today-label{font-size:12px;color:#999;margin-top:2px}
+.hero-today .today-date{font-size:11px;color:#bbb}
+.hero-divider{width:1px;height:72px;background:linear-gradient(180deg,transparent,#e8e8e8,transparent);flex-shrink:0}
+.hero-stats{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.hero-stats .hero-stat-row{display:flex;justify-content:space-between;font-size:13px;color:#888}
+.hero-stats .hero-stat-row .val{font-weight:700;color:#444}
+.hero-banner{margin-top:4px;padding-top:8px;border-top:1px solid #f5f5f5;font-size:13px;color:#F9A825;font-weight:600;text-align:center}
+
 h1{text-align:center;font-size:1.6em;margin:0 0 4px;color:#333;position:relative;display:inline-block;left:50%;transform:translateX(-50%)}
 h1 .title-emoji{display:inline-block;animation:float 3s ease-in-out infinite}
 h1::after{content:'';position:absolute;bottom:-4px;left:10%;width:80%;height:3px;background:linear-gradient(90deg,transparent,#FFECB3,#81C784,#BBDEFB,transparent);border-radius:2px;opacity:.6}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.sub{text-align:center;color:#999;margin-bottom:24px}
-.legend{display:flex;justify-content:center;gap:16px;margin-bottom:28px;flex-wrap:wrap;background:#fff;padding:12px 20px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.sub{text-align:center;color:#999;margin-bottom:0}
+.title-wrap{text-align:center;margin-bottom:18px}
+.legend{display:flex;justify-content:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;background:#fff;padding:12px 20px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .leg i{font-style:normal;margin-right:4px}
 .year{margin-bottom:24px}
 .yr{font-size:1.2em;font-weight:700;color:#555;margin-bottom:10px;padding-bottom:6px}
@@ -33,17 +46,19 @@ a.cell:hover .tip{display:block}
 .stats{text-align:center;color:#999;font-size:.8em;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #eee}
 @media(max-width:768px){.months{grid-template-columns:repeat(auto-fill,minmax(125px,1fr))}}
 </style></head><body>
+<div class=hero>
+<div class=hero-today><span class=big-emoji>☀️</span><div class=today-label>开心</div><div class=today-date>7/30 周四</div></div>
+<div class=hero-divider></div>
+<div class=hero-stats>
+<div class=hero-stat-row><span>☀️ 开心的日子</span><span class=val>52 天</span></div>
+<div class=hero-stat-row><span>🌤️ 一般</span><span class=val>1 天</span></div>
+<div class=hero-stat-row><span>🌧️ 难过 / ⛈️ 愤怒</span><span class=val>各 1 天</span></div>
+<div class=hero-banner>已记录 55 天 · 94.5% 的日子如此开心 ✨</div>
+</div>
+</div>
+<div class=title-wrap>
 <h1><span class=title-emoji>💭</span> 情绪记录员</h1>
 <div class=sub>察觉自己的情绪 · 2026.06.06起</div>
-<div class=stats>已记录心情 <strong>55</strong> 天 · ☀️ 52天 · 🌤️ 1天 · 🌧️ 1天 · ⛈️ 1天</div>
-<div class=happy-banner>
-<div class=pct>我们人生中居然有94.5%的日子如此开心</div>
-<div class=desc>52 / 55 天是 ☀️ 开心</div>
-</div>
-<div class=hl-box><h3>☁️ 人生并非日日晴</h3>
-<a href="https://app.notion.com/p/Diary-37e353e55c1b80579e5be0faa5d2a6d1" target="_blank" class=hl-item style="text-decoration:none">2026-06-13 🌤️ 一般</a>
-<a href="https://app.notion.com/p/Diary-37f353e55c1b817e98c3daa6ce28b288" target="_blank" class=hl-item style="text-decoration:none">2026-06-15 ⛈️ 愤怒</a>
-<a href="https://app.notion.com/p/Diary-3a4353e55c1b81d5b696c12f7ccefe44" target="_blank" class=hl-item style="text-decoration:none">2026-07-22 🌧️ 难过</a>
 </div>
 <div class=legend>
 <span class=leg><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#FFECB3;border:1px solid #FFECB3;vertical-align:middle"></span> <i>☀️</i> 开心</span>
